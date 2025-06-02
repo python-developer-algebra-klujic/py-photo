@@ -15,3 +15,4 @@ lower = photo_v - 500
 photo_crop = photo.crop((left, upper, right, lower))
 
 photo_crop.show()
+photo_crop.save(r'./algebra_campus_crop.jpg')
