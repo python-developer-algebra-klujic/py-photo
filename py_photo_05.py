@@ -1,28 +1,19 @@
-from PIL import Image
-from PIL.Image import Transpose
+from PIL import Image, ImageFilter
 
 photo_path = r'./algebra_campus.jpg'
 photo = Image.open(photo_path)
 
-help(photo.transpose)
+# photo.filter(ImageFilter.CONTOUR).show()
+# photo.filter(ImageFilter.EDGE_ENHANCE).show()
+# photo.filter(ImageFilter.EDGE_ENHANCE_MORE).show()
+# photo.filter(ImageFilter.EMBOSS).show()
+# photo.filter(ImageFilter.FIND_EDGES).show()
+# photo.filter(ImageFilter.SHARPEN).show()
+# photo.filter(ImageFilter.SMOOTH).show()
+# photo.filter(ImageFilter.SMOOTH_MORE).show()
 
-# photo_flip_lr = photo.transpose(method=Transpose.FLIP_LEFT_RIGHT)
-# photo_flip_lr.show()
-
-# photo_flip_tb = photo.transpose(method=Transpose.FLIP_TOP_BOTTOM)
-# photo_flip_tb.show()
-
-# photo_flip_r90 = photo.transpose(method=Transpose.ROTATE_90)
-# photo_flip_r90.show()
-
-# photo_flip_r180 = photo.transpose(method=Transpose.ROTATE_180)
-# photo_flip_r180.show()
-
-# photo_flip_r270 = photo.transpose(method=Transpose.ROTATE_270)
-# photo_flip_r270.show()
-
-# photo_flip_transpose = photo.transpose(method=Transpose.TRANSPOSE)
-# photo_flip_transpose.show()
-
-photo_flip_transverse = photo.transpose(method=Transpose.TRANSVERSE)
-photo_flip_transverse.show()
+# photo.filter(ImageFilter.BoxBlur(radius=15)).show()
+# photo.filter(ImageFilter.GaussianBlur(radius=15)).show()
+# photo.filter(ImageFilter.MaxFilter(size=5)).show()
+# photo.filter(ImageFilter.MedianFilter(size=5)).show()
+photo.filter(ImageFilter.MinFilter(size=5)).show()
